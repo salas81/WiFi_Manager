@@ -118,5 +118,5 @@ void wifi_init_sta(wifi_callback_t callback) {
     ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
     ESP_ERROR_CHECK(esp_wifi_start() );
 
-    xTaskCreate(wifi_manager_task, "WiFi Manager Task", 2048, NULL, 3, NULL);
+    xTaskCreate(wifi_manager_task, "WiFi Manager Task", 4096, NULL, 3, NULL);
 }
